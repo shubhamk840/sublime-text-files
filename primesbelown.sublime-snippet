@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+const int nax = 1e6+1;
+vi temp(nax,-1);
+vi primes;
+void fillprimes(){
+	for(int i=2;i*i<nax;i++){
+		if(temp[i]==-1){
+		for(int j=i*i;j<nax;j+=i){
+			temp[j]=0;
+		}
+	   }
+	}
+	// ao(temp);
+	For(i,1,nax){
+		if(temp[i]==-1){
+			primes.pb(i);
+		}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Primesbelown</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

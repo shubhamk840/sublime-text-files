@@ -1,0 +1,5 @@
+[
+	{"keys": ["f8"], "command": "build", "args": {"select": true}},
+		{ "keys": ["ctrl+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["ctrl+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+]

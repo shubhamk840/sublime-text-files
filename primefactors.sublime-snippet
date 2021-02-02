@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+vll  primeFactors(ll int n)  {  vll a;
+    while (n % 2 == 0)  {  a.pb(2);
+        n = n/2;  
+    }for (int i = 3; i <= sqrt(n); i = i + 2)  {  
+        while (n % i == 0)  {  a.pb(i);n = n/i;  
+		}
+	}    if (n > 2)  a.pb(n);
+    return a;
+} 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>primefactors</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

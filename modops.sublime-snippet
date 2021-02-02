@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+const ll int mod = 1e9+7;
+ll modmul(ll a, ll b) {
+    return ((a%mod) * (b%mod)) % mod;
+}
+ 
+ll modadd(ll a , ll b){
+    return((a%mod)+(b%mod)+mod)%mod;
+}
+ 
+ll modsub(ll a , ll b){
+    return((a%mod) - (b%mod) + mod)%mod;
+}
+ 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>modops</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

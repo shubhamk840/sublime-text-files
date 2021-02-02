@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+const int M = 1e9+7;
+const int N = 100005;
+#define NCR
+#define PRIME	M
+ll int pw(ll int a,ll int p=M-2,ll int MOD=M){
+	ll int result = 1;
+	while (p > 0) {
+		if (p & 1)
+			result = a * result % MOD;
+		a = a * a % MOD;
+		p >>= 1;
+	}
+	return result;
+}
+ll int fact[N],invfact[N];
+void init(){
+	ll int p=PRIME;
+	fact[0]=1;
+	ll int i;
+	for(i=1;i<N;i++){
+		fact[i]=i*fact[i-1]%p;
+	}
+	i--;
+	invfact[i]=pw(fact[i],p-2,p);
+	for(i--;i>=0;i--){
+		invfact[i]=invfact[i+1]*(i+1)%p;
+	}
+}
+ll int ncr(ll int n,ll int r){
+	if(r > n || n < 0 || r < 0)return 0;
+	return fact[n]*invfact[r]%PRIME*invfact[n-r]%PRIME;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>combinatorics</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
